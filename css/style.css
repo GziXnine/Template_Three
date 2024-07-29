@@ -1,0 +1,50 @@
+/* ! Start Global Rules */
+:root {
+  --main-color: #2196f3;
+  --alt-color: #1787e0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  user-select: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/** Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/** Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/** Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* ! End Global Rules */
