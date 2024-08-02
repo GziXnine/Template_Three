@@ -729,6 +729,82 @@ ul {
 }
 
 /* ! End Features */
+/* ! Start Testimonials */
+.testimonials {
+  padding: var(--main-padding) 0;
+  position: relative;
+  background-color: var(--background-dark);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+    .box {
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 15px rgb(0, 0, 0, 0.07);
+      -webkit-box-shadow: 0 12px 20px rgb(0, 0, 0, 0.07);
+      position: relative;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+      transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
+      -webkit-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
+      -moz-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
+      -ms-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
+      -o-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
+      border: 2px solid var(--main-color);
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
+      }
+
+      img {
+        position: absolute;
+        top: -50px;
+        right: -10px;
+        width: 100px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border: 10px solid var(--background-dark);
+      }
+
+      h3 {
+        color: var(--main-color);
+        padding-bottom: 5px;
+      }
+
+      span {
+        color: black;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .rate {
+        padding-top: 10px;
+
+        .filled {
+          color: #ffc107;
+        }
+      }
+
+      p {
+        padding-top: 10px;
+        color: #777;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* ! End Testimonials */
 /* ! Start Animation */
 @keyframes up-and-down {
 
