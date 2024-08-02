@@ -805,6 +805,162 @@ ul {
 }
 
 /* ! End Testimonials */
+/* ! Start Team Member  */
+.team {
+  padding: var(--main-padding) 0;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+    .box {
+      position: relative;
+
+      &::before {
+        content: "";
+        background-color: #f3f3f3;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-radius: 10px;
+        transition: var(--trasnition-duration);
+        -webkit-transition: var(--trasnition-duration);
+        -moz-transition: var(--trasnition-duration);
+        -ms-transition: var(--trasnition-duration);
+        -o-transition: var(--trasnition-duration);
+        width: calc(100% - 60px);
+        z-index: -2;
+      }
+
+      &::after {
+        content: "";
+        background-color: #f3f3f3;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-radius: 10px;
+        transition: var(--trasnition-duration);
+        -webkit-transition: var(--trasnition-duration);
+        -moz-transition: var(--trasnition-duration);
+        -ms-transition: var(--trasnition-duration);
+        -o-transition: var(--trasnition-duration);
+        background-color: #e4e4e4;
+        width: 0;
+        z-index: -1;
+      }
+
+      &:hover::after {
+        width: calc(100% - 60px);
+
+      }
+
+      .data {
+        display: flex;
+        align-items: center;
+        padding-top: 60px;
+
+        img {
+          width: calc(100% - 60px);
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          transition: var(--trasnition-duration);
+          -webkit-transition: var(--trasnition-duration);
+          -moz-transition: var(--trasnition-duration);
+          -ms-transition: var(--trasnition-duration);
+          -o-transition: var(--trasnition-duration);
+        }
+
+        &:hover img {
+          filter: grayscale(90%);
+          -webkit-filter: grayscale(90%);
+        }
+
+        .social {
+          width: 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+
+          a {
+            width: 60px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          i {
+            color: #777;
+            transition: var(--trasnition-duration);
+            -webkit-transition: var(--trasnition-duration);
+            -moz-transition: var(--trasnition-duration);
+            -ms-transition: var(--trasnition-duration);
+            -o-transition: var(--trasnition-duration);
+          }
+        }
+      }
+
+      .info {
+        padding-left: 80px;
+
+        h3 {
+          padding-top: 20px;
+          margin-bottom: 0;
+          color: var(--main-color);
+          font-size: 22px;
+          transition: var(--trasnition-duration);
+          -webkit-transition: var(--trasnition-duration);
+          -moz-transition: var(--trasnition-duration);
+          -ms-transition: var(--trasnition-duration);
+          -o-transition: var(--trasnition-duration);
+        }
+
+        p {
+          margin-top: 10px;
+          margin-bottom: 25px;
+        }
+      }
+
+      &:hover .info h3 {
+        color: var(--alt-color);
+      }
+
+      &:hover a {
+        &:nth-of-type(1) i {
+          color: #1877f2;
+        }
+
+        &:nth-of-type(2) i {
+          color: #333;
+        }
+
+        &:nth-of-type(3) i {
+          color: #0a66c2;
+        }
+
+        &:nth-of-type(4) i {
+          color: #5865f2;
+        }
+
+        &:nth-of-type(5) i {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}
+
+/* ! End Team Member */
 /* ! Start Animation */
 @keyframes up-and-down {
 
