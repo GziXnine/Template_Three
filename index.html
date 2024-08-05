@@ -585,6 +585,9 @@
   <!-- ! End Team Member -->
   <!-- ! Start Services -->
   <div class="services" id="services">
+    <!-- TODO:- -->
+    <div class="dots dots-up"></div>
+    <div class="dots dots-down"></div>
     <h2 class="main-title">Services</h2>
     <div class="container">
       <div class="box">
@@ -741,7 +744,7 @@
       </div>
       <div class="subscribe">
         <form action="">
-          <input type="email" placeholder="Enter Your Email" />
+          <input type="email" placeholder="Enter Your Email" id="email" name="email" autocomplete="email" required />
           <input type="submit" value="Subscribe" />
         </form>
       </div>
@@ -876,20 +879,20 @@
         <img decoding="async" src="images/discount.png" alt="" />
       </div>
     </div>
-    <div class="form">
-      <div class="content">
-        <h2>Request A Discount</h2>
-        <form action="" method="get">
+    <div class="form" id="request-discount-form">
+      <div class="content" id="form-content">
+        <h2 id="form-title">Request A Discount</h2>
+        <form action="" method="get" id="discount-form">
           <div id="name-error" class="name" style="display: none;">Please enter your name.</div>
-          <input class="input" type="text" placeholder="Your Name" name="name" id="name" required maxlength="50"
-            pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces.">
-          <input class="input" type="email" placeholder="Your Email" name="email" id="email" required maxlength="100"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+          <input class="input" type="text" placeholder="Your Name" name="name" id="name" autocomplete="name" required
+            maxlength="50" pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces.">
+          <input class="input" type="email" placeholder="Your Email" name="email" id="email" autocomplete="email"
+            required maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address.">
           <div id="phone-error" class="error-message" style="display: none;">Please enter a valid phone number.</div>
-          <input class="input" type="text" placeholder="Your Phone" name="mobile" id="mobile" required maxlength="15"
-            pattern="\d{10,15}" title="Phone number should be 10 to 15 digits long.">
-          <select id="country" class="fui-select input" name="fields[country][country]" required autocomplete="country"
-            data-fui-id="contactForm-country-country" data-fui-message="Please select a country" data-country="">
+          <input class="input" type="text" placeholder="Your Phone" name="mobile" id="mobile" autocomplete="tel"
+            required maxlength="15" pattern="\d{10,15}" title="Phone number should be 10 to 15 digits long.">
+          <select id="country" class="fui-select input" name="country" required autocomplete="country">
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -1013,6 +1016,7 @@
             <option value="Kazakhstan">Kazakhstan</option>
             <option value="Kenya">Kenya</option>
             <option value="Kiribati">Kiribati</option>
+            <option value="Kosovo">Kosovo</option>
             <option value="Kuwait">Kuwait</option>
             <option value="Kyrgyzstan">Kyrgyzstan</option>
             <option value="Laos">Laos</option>
@@ -1024,7 +1028,7 @@
             <option value="Liechtenstein">Liechtenstein</option>
             <option value="Lithuania">Lithuania</option>
             <option value="Luxembourg">Luxembourg</option>
-            <option value="Macao SAR China">Macao SAR China</option>
+            <option value="Macau SAR China">Macau SAR China</option>
             <option value="Madagascar">Madagascar</option>
             <option value="Malawi">Malawi</option>
             <option value="Malaysia">Malaysia</option>
@@ -1127,8 +1131,6 @@
             <option value="Turkmenistan">Turkmenistan</option>
             <option value="Turks & Caicos Islands">Turks & Caicos Islands</option>
             <option value="Tuvalu">Tuvalu</option>
-            <option value="U.S. Outlying Islands">U.S. Outlying Islands</option>
-            <option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
             <option value="Uganda">Uganda</option>
             <option value="Ukraine">Ukraine</option>
             <option value="United Arab Emirates">United Arab Emirates</option>
@@ -1140,14 +1142,14 @@
             <option value="Vatican City">Vatican City</option>
             <option value="Venezuela">Venezuela</option>
             <option value="Vietnam">Vietnam</option>
-            <option value="Wallis & Futuna">Wallis & Futuna</option>
             <option value="Western Sahara">Western Sahara</option>
             <option value="Yemen">Yemen</option>
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
           </select>
-          <textarea class="input" placeholder="Tell Us About Your Needs" name="message" required></textarea>
-          <input type="submit" value="Send" />
+          <textarea class="input" placeholder="Tell Us About Your Needs" name="message" id="message" autocomplete="off"
+            required></textarea>
+          <input class="submit" type="submit" value="Request A Discount" id="submit-button">
         </form>
       </div>
     </div>
