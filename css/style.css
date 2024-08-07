@@ -144,7 +144,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -340,7 +340,7 @@ html {
     -o-transform: translateX(-50%);
     padding: 25px;
     background-color: white;
-    width: 87%;
+    width: 80%;
     border-bottom: 3px solid var(--main-color);
     z-index: -1;
     opacity: 0;
@@ -483,7 +483,7 @@ html {
       color: var(--alt-color);
     }
 
-    i {
+    svg {
       animation: bouncing 1.5s infinite;
       -webkit-animation: bouncing 1.5s infinite;
     }
@@ -719,6 +719,7 @@ html {
         font-size: 40px;
         margin: auto;
         width: fit-content;
+        letter-spacing: -2px;
 
         &::after {
           content: "";
@@ -851,7 +852,6 @@ html {
       -moz-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
       -ms-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
       -o-transition: transform var(--trasnition-duration), box-shadow var(--trasnition-duration);
-      border: 2px solid var(--main-color);
 
       &:hover {
         transform: translateY(-10px);
@@ -1222,6 +1222,10 @@ html {
           height: 30px;
           background-color: #eee;
           margin: 12px 0;
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
 
           span {
             display: block;
@@ -1230,6 +1234,8 @@ html {
             background-color: var(--main-color);
             border-top-right-radius: 25px;
             border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
             transition: calc(var(--trasnition-duration) * 12);
             -webkit-transition: calc(var(--trasnition-duration) * 12);
             -moz-transition: calc(var(--trasnition-duration) * 12);
@@ -1595,6 +1601,10 @@ html {
         &::after {
           width: 100%;
         }
+
+        ul li::before {
+          color: var(--main-color);
+        }
       }
 
       .title {
@@ -1637,7 +1647,7 @@ html {
             content: "\f560";
             font-weight: 900;
             margin-right: 10px;
-            color: var(--main-color)
+            color: gray;
           }
         }
       }
@@ -1697,6 +1707,10 @@ html {
 
       &:hover .label {
         background-color: red;
+
+        &::before {
+          border-color: transparent transparent #f6f6f6 transparent;
+        }
       }
     }
   }
@@ -1957,6 +1971,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-basis: 50%;
+    position: relative;
 
     @media (max-width: 991px) {
       flex-basis: 100%;
@@ -1975,21 +1990,20 @@ html {
 
       form {
         padding-top: 10px;
-        max-width: 350px;
         margin: auto;
         position: relative;
         z-index: 1;
 
         #phone-error,
         .name {
-          text-align: left;
+          text-align: center;
           font-size: 12px;
-          padding: 0 10px 5px;
+          padding-bottom: 5px;
           color: red;
         }
 
         .input {
-          width: 100%;
+          width: 55%;
           margin-bottom: 20px;
           border: none;
           outline: none;
@@ -2020,6 +2034,10 @@ html {
           }
         }
 
+        .invalid {
+          border-color: red;
+        }
+
         select {
           padding: 8px !important;
         }
@@ -2030,19 +2048,23 @@ html {
         }
 
         [type="submit"] {
-          margin-top: 20px;
-          width: 100%;
-          margin-bottom: 20px;
+          display: block;
+          margin: auto;
           border: none;
           outline: none;
           background-color: var(--main-color);
-          padding: 15px;
+          padding: 15px 30px;
+          border-radius: 6px;
           color: white;
           font-weight: bold;
           cursor: pointer;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          -o-border-radius: 6px;
 
           &:hover {
-            background-color: var(--alt-color);
+            background-color: green;
           }
         }
       }

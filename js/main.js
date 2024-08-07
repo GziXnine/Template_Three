@@ -109,22 +109,20 @@ function startCount(el) {
 };
 
 // ! Make A Function To Make A Display A Hint In Text Name
-window.addEventListener('load', function (e) {
+window.addEventListener('load', function () {
   const textName = document.getElementById("name");
   const errorName = document.getElementById("name-error");
 
   textName.addEventListener('blur', () => {
-    const value = textName.value;
+  const value = textName.value;
 
-    // TODO: Check if the field is empty or contains numbers
-    if (value === "" || /\d/.test(value))
-    {
-      errorName.style.display = "block";
-      errorName.textContent = value === "" ? "This field cannot be empty." : "Numbers are not allowed.";
-    }
-    else
-    {
+  if (value === "" || /\d/.test(value)) {
+    errorName.style.display = "block";
+    errorName.textContent = value === "" ? "This field cannot be empty." : "Numbers are not allowed.";
+    textName.classList.add('invalid');
+    } else {
       errorName.style.display = "none";
+      textName.classList.remove('invalid');
     }
   });
 });
@@ -136,15 +134,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
   phoneInput.addEventListener('input', function() {
     const pattern = /^\+?\d{0,3}?[- .]?\(?\d{1,4}?\)?[- .]?\d{1,4}[- .]?\d{1,9}$/;
-    if (pattern.test(phoneInput.value))
-    {
+    
+    if (pattern.test(phoneInput.value)) {
       phoneError.style.display = 'none';
       phoneInput.classList.remove('invalid');
-    }
-    else
-    {
+    } else {
       phoneError.style.display = 'block';
       phoneInput.classList.add('invalid');
+    }
+  });
+});
+
+// ! Make a Button Change Position In Form When The User Enter All Data..
+document.addEventListener('DOMContentLoaded', function() {
+  const submitButton = document.getElementById('submit-button');
+  const form = document.getElementById('discount-form');
+
+  function moveSubmitButton() {
+    const formRect = form.getBoundingClientRect();
+    const maxX = formRect.width - submitButton.offsetWidth;
+    const maxY = formRect.height - submitButton.offsetHeight;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    submitButton.style.position = 'absolute';
+    submitButton.style.left = `${randomX}px`;
+    submitButton.style.top = `${randomY}px`;
+  }
+
+  submitButton.addEventListener('mouseover', (event) => {
+    event.preventDefault();
+
+    const allInputs = form.querySelectorAll('.input');
+    let allValid = true;
+
+    allInputs.forEach(input => {
+      if (!input.checkValidity()) {
+        allValid = false;
+      }
+    });
+
+    if (allValid) {
+      moveSubmitButton();
     }
   });
 });
