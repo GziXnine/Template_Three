@@ -1975,6 +1975,7 @@ html {
 
     @media (max-width: 991px) {
       flex-basis: 100%;
+      margin-bottom: 70px;
     }
 
     .content {
@@ -2064,7 +2065,7 @@ html {
           -o-border-radius: 6px;
 
           &:hover {
-            background-color: green;
+            background-color: rgb(231, 123, 0);
           }
         }
       }

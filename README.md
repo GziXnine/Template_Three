@@ -81,7 +81,6 @@ Utilize icons from [Font Awesome](https://fontawesome.com/search?o=r&m=free). Fo
 
 - **Additional Pages**: Adding more sections and pages to the website.
 - **User Authentication**: Implementing a user login and registration system.
-- **API Integration**: Integrating third-party APIs for enhanced functionality.
 - **Performance Optimization**: Improving load times and performance.
 
 ## 🧩 Troubleshooting
@@ -102,6 +101,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - [Elzero Web School](https://elzero.org/) for the tutorials and guidance.
-- [Bondi](https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_Three) for the original design inspiration.
+- [Template](https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_Three) for the original design inspiration.
 - [Font Awesome](https://fontawesome.com/) for the icons.
 - [Google Fonts](https://fonts.google.com/) for the typography.
